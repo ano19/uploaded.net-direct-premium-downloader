@@ -1,6 +1,5 @@
 <?php
 error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
-ini_set("max_execution_time", 0);
 session_start();
 
 if(!file_exists("./inc/config.inc.php")) {
@@ -89,6 +88,14 @@ if(!empty($_GET["dl"]) && !empty($_GET["key"])) {
 <title>ul.net Download</title>
 <link type="text/css" href="./css/style.css" rel="stylesheet" />
 <script type="text/javascript">
+window.onload = init;
+
+function init()
+{
+	link = document.getElementById('file');
+	link.focus();
+}
+
 function start() 
 {
 	var file = document.getElementById("file");
