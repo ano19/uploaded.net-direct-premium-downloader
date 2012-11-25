@@ -6,7 +6,7 @@ This website allows you to download files directly over your premium account. Th
 
 Screenshot
 =============
-<img src="https://github.com/patschi/uploaded.net-direct-premium-downloader/blob/master/screenshot.png">
+<img src="https://raw.github.com/patschi/uploaded.net-direct-premium-downloader/master/screenshot.png">
 
 
 Credits
