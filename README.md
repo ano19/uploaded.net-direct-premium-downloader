@@ -4,6 +4,7 @@ uploaded.net premium downloader - direct
 
 This website allows you to download files directly over your premium account. The file will be directly pushed out to the user over your server to download the file - so you don't have to give your friends the uploaded.net login informations. Please be aware, that account-sharing isn't allowed - don't know if this is against the TOS of uploaded.net :)
 
+Don't forget to change the login informations in /inc/config.inc.sample.php and change the filename to config.inc.php!
 
 Screenshot
 =============
