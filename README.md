@@ -6,10 +6,10 @@ This website allows you to download files directly over your premium account. Th
 
 Screenshot
 =============
-<img src="screenshot.png">
+<img src="https://github.com/patschi/uploaded.net-direct-premium-downloader/blob/master/screenshot.png">
 
 
 Credits
 =============
-I'm using the fantastic Uploaded.net PHP API from it-gecko:
-<a href="http://www.it-gecko.de/uploaded-to-api-script.html">http://www.it-gecko.de/uploaded-to-api-script.html</a>
+I'm using the fantastic Uploaded.net PHP API from it-gecko:<br />
+<a href="http://www.it-gecko.de/uploaded-to-api-script.html" target="_blank">http://www.it-gecko.de/uploaded-to-api-script.html</a>
