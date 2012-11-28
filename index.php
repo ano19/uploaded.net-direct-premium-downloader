@@ -1,5 +1,6 @@
 <?php
-error_reporting(E_ALL & ~E_NOTICE & ~E_WARNING);
+error_reporting(E_ALL & ~E_NOTICE);
+set_time_limit(0);
 session_start();
 
 if(!file_exists("./inc/config.inc.php")) {
@@ -65,8 +66,9 @@ if(!empty($_GET["dl"]) && !empty($_GET["key"])) {
 	$dlinfo = $up->get_download_infos($file);
 	if($dlinfo !== false) 
 	{
-		if(trim($_GET["key"]) == md5($dlinfo['filename']."|".session_id())) {
-			session_regenerate_id();
+		$check_key = md5($dlinfo['filename']."|".session_id());
+		session_regenerate_id();
+		if(trim($_GET["key"]) == $check_key) {
 			header('Content-Type: application/force-download');
 			header('Content-Disposition: attachment; filename="'.$dlinfo['filename'].'"');
 			header('Content-Length: '.$dlinfo['size']);
@@ -78,6 +80,7 @@ if(!empty($_GET["dl"]) && !empty($_GET["key"])) {
 	 }else{
 		die("ERROR|404|File was not found. File still available?");
 	}
+	session_regenerate_id();
 	die("ERROR|000|Unknown error.");
 }
 
